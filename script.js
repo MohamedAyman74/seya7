@@ -10,7 +10,7 @@ const audioPlay = (e) => {
     const pic = document.querySelector(".pic");
     audio.play();
     pic.style.backgroundImage = "url('ehda.jpg')";
-    setInterval(() => {
+    setTimeout(() => {
       pic.style.backgroundImage = "url('ehda2.jpg')";
     }, 7000);
   }
@@ -22,7 +22,7 @@ form.addEventListener("submit", audioPlay);
 
 audio.addEventListener("ended", () => {
   const pic = document.querySelector(".pic");
-  pic.style.backgroundImage = "none";
+  pic.style.backgroundImage = "url('ehda3.jpg')";
   if (x === 3) body.classList.toggle("pic");
   x = 0;
 });
