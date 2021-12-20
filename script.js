@@ -1,14 +1,17 @@
 const audio = new Audio("audio.mp3");
 const form = document.querySelector("#seya7");
-const body = document.querySelector("body");
+const body = document.querySelector(".body");
+let x = 0;
 
 const audioPlay = (e) => {
   audio.play();
-  body.style.backgroundImage = "url('ehda.jpg')";
+  if (x !== 3) body.classList.toggle("pic");
+  x = 3;
   e.preventDefault();
 };
 
 form.addEventListener("submit", audioPlay);
 audio.addEventListener("ended", () => {
-  body.style.background = "none";
+  if (x === 3) body.classList.toggle("pic");
+  x = 0;
 });
