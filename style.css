@@ -17,9 +17,9 @@ body {
   height: 100%;
 }
 
-.pic {
-  background-image: url("ehda.jpg");
-}
+/* .pic {
+background-image: url("ehda2.jpg");
+} */
 
 @media only screen and (max-width: 550px) {
   .pic {
