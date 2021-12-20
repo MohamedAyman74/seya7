@@ -4,10 +4,11 @@ const body = document.querySelector("body");
 
 const audioPlay = (e) => {
   audio.play();
+  body.style.backgroundImage = "url('ehda.jpg')";
   e.preventDefault();
 };
 
 form.addEventListener("submit", audioPlay);
 audio.addEventListener("ended", () => {
-  body.style.backgroundColor = "red";
+  body.style.background = "none";
 });
